@@ -3,6 +3,11 @@
 #
 
 
+ifdef CONFIG_CC_OPTIMIZE_ALOT
+CFLAGS_xdr.o += -O2
+endif
+
+
 obj-$(CONFIG_SUNRPC) += sunrpc.o
 obj-$(CONFIG_SUNRPC_GSS) += auth_gss/
 obj-$(CONFIG_SUNRPC_XPRT_RDMA) += xprtrdma/
